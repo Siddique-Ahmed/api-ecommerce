@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*
+SCROLL BAR STYLING
+*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #86c148;
+}
+::-webkit-scrollbar-track {
+  background-color: #188fbb;
+}
+/*
+APP COMPONENT
+*/
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/*
+HEADER  STYLING
+*/
+.header {
+  width: 100%;
+  min-height: 17vh;
+  position: relative;
+}
+.header nav {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+nav .r-side {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+.l-side {
+  display: flex;
+  width: 10%;
+  align-items: center;
+}
+.l-side img {
+  width: 80px;
+  height: 80px;
+}
+.r-side .login-signup {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.login-signup button {
+  width: 90px;
+  height: 40px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.login-signup .login {
+  background: #86c148;
+}
+.login-signup .login:hover {
+  color: #86c148;
+  border: 1px solid #86c148;
+  background-color: transparent;
+}
+.login-signup .signup {
+  background: #188fbb;
+}
+.login-signup .signup:hover {
+  color: #188fbb;
+  border: 1px solid #188fbb;
+  background-color: transparent;
+}
+nav .cart {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart button {
+  font-size: 17px;
+  color: #188fbb;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.r-side .lang {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.lang select {
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #188fbb;
+  color: #86c148;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.lang select option:hover {
+  color: #188fbb;
+}
+nav .cart i {
+  font-size: 25px;
+  cursor: pointer;
+  color: #188fbb;
+  display: none !important;
+  margin-right: 10px;
+}
+/*
+CONTAINER STYLING
+*/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 10px 20px;
+  background: rgb(248, 248, 248);
+}
+.container div.cards-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.cards {
+  width: 320px;
+  min-height: 30vh;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 10px 15px;
+}
+.cards:hover .cardImg img {
+  transform: scale(0.94);
+  border-radius: 10px;
+}
+.cardImg {
+  width: 100%;
+}
+.cardImg img {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.cardDetail {
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 10px 15px;
+}
+.cardDetail h3 {
+  font-size: 24px;
+  color: #188fbb;
+  font-weight: 500;
+}
+.cardDetail p {
+  font-size: 17px;
+  font-weight: 400;
+}
+.cardDetail p.price {
+  color: #188fbb;
+}
+/*
+FOOTER STYLING
+*/
+.footer {
+  width: 100%;
+  min-height: 20vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+}
+.footer h1 {
+  font-size: 21px;
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (max-width: 495px) {
+  nav .r-side{
+    width: 100%;
+    min-height: 40vh;
+    background-color: #fff;
+    position: absolute;
+    top: -900px;
+    left: 0;
+    flex-direction: column;
+    padding: 15px 20px;
+    transition: 0.3s ease-in-out;
+  }
+  .r-side.open{
+    top: 90px;
+  }
+  .r-side .login-signup{
+    width: 100%;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  .login-signup button{
+    width: 90%;
+    margin: 10px 0;
+  }
+  .r-side .lang{
+    width: 90%;
+  }
+  nav .cart{
+    width: 30%;
+  }
+  nav .cart i{
+    display: block !important;
+  }
+}
